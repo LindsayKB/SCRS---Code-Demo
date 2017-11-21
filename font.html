@@ -1,0 +1,20 @@
+<html>
+<head>
+<script>
+$('document').ready(function() {
+  var item = $('.main-navigation > ul > li > a').children().html();
+  alert(item);
+  $('.main-navigation > ul > li > a').children().html(item.substr(0, item.length - 1) + '<span class="last">' + item.substr(-1) + '</span>');
+});
+</script>
+</head>
+<body>
+<div class="main-navigation">
+<ul>
+<li>
+<a href="#">test</a>
+</li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery smartCycle.js Plugin Demo</title>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="smartCycle.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="http://www.jqueryscript.net/chart-graph/Animated-Circle-Diagram-Plugin-with-jQuery-smartCycle-js.html">Download This Plugin</a></li>
+<li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<div class="title">
+    <h1>jQuery smartCycle.js Plugin Demo</h1>
+</div>
+
+<div class="container">
+    <div class="ciclo1">
+        <a class="sc_object">A</a>
+        <a class="sc_object">B</a>
+        <a class="sc_object">C</a>
+        <a class="sc_object">D</a>
+        <a class="sc_object">E</a>
+        <a class="sc_object">F</a>
+        <a class="sc_center">center</a>
+    </div>
+</div>
+
+<div class="footer">
+    <p>
+        <div class="btn add">Add</div>
+        <span class="by">By MHVDeveloper</span>
+    </p>
+</div>
+
+
+</body>
+</html>
+
+<script>
+
+ var radio = 160;
+ var radio_arrows =140;
+ var container_width = 420, container_height=420;
+ var c_container_width = 420, c_container_height=420;
+
+
+$(".ciclo1").smartCycle({
+    container_width: '420px',
+    container_height: '420px',
+    radio: radio,
+    radio_arrows: radio_arrows,
+    arrows_colors:['#40A4C0'],
+    colors:['#40A4C0','#40A4C0']
+});
+
+var alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+var alphabet_pos =6;
+
+
+$(".add").click(function(){
+    
+    $(".ciclo1").append('<a class="sc_object">'+alphabet[alphabet_pos]+'</a>');  
+
+    radio+=25;
+    radio_arrows+=25;
+    container_width+=50;
+    container_height+=50;
+
+    c_container_width+=50;
+    c_container_height+=50;
+
+    $(".container").css({
+        'width':c_container_width+'px',
+        'height':c_container_height+'px'
+    });
+
+    $(".ciclo1").smartCycle('options',{'radio': radio, 'radio_arrows': radio_arrows, 'container_width': container_width+'px',
+    'container_height': container_height+'px',});
+
+    
+
+    $(".ciclo1").smartCycle('realign');
+
+    alphabet_pos+=1;
+
+});
+
+</script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>

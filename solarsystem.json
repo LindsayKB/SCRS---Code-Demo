@@ -1,0 +1,50 @@
+
+[
+    {
+    	"key": "Mercury",
+    	"radius": 200000.00,
+		"groupNum": 1
+    	},
+		
+		{
+    	"key": "Mercury",
+    	"radius": 200000.00,
+		"groupNum": 2
+    	},
+    {
+    	"key": "Venus",
+    	"radius": 200000.00,
+		"groupNum": 3
+    	},
+    {
+        "key": "Earth",
+    	"radius": 200000.00,
+		"groupNum": 4	
+		},
+    {
+    	"key": "Mars",
+    	"radius": 200000.00,
+		"groupNum": 5
+    	},
+    {
+        "key": "Jupiter",
+    	"radius": 200000.00,
+		"groupNum": 6
+    },
+    {
+        "key": "Saturn",
+    	"radius": 200000.00,
+		"groupNum": 7	
+    },
+    {
+        "key": "Uranus",
+    	"radius": 200000.00,
+		"groupNum": 8
+    },
+    {
+        "key": "Neptune",
+    	"radius": 200000.00,
+		"groupNum": 9
+    }
+]
+

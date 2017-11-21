@@ -1,0 +1,88 @@
+Class: screenShot
+Version: 1.0 12/7/2015
+
+Copyright 2015 Wagon Trader, All Rights Reserved
+
+
+Description:
+
+Capture image of webpage using the screenshotLayer API from
+http://www.screenshotlayer.com.
+
+
+Files:
+
+screenshot.class.php - main class
+
+example.php - basic usage
+
+
+Installation:
+
+Upload files to a web accessible location on your server (eg. public_html)
+
+
+Configuration:
+
+You can change the following settings in the class to meet your specific needs...
+
+apiKey = Your personal API Key, get a free key at https://screenshotlayer.com/product
+
+endpoint = The API endpoint, you will only need to change this if the API
+    changes location.
+    
+secretKey = If you have defined and activated the secret keyword feature from you
+    screenshotlayer dashboard, add your secret keyword here.
+
+Usage:
+
+refer to example.php file for class instantiation and basic usage.
+
+refer to screenshot.class.php for instructions on using methods.
+
+The screenshotlayer API will first attempt to retreive the image from the cache,
+if not found it will then produce a new image. Images returned from the cache
+will not be charged against your monthly usage.
+
+Customizing the captured image:
+
+In addition to the url, you can set the following params to further customize the
+returned image. You can use the setParam method to add/change any param.
+
+fullpage - set to 1, to capture entire webpage
+
+width - specify width in pixels to resize capture
+
+viewport - the width and height in pixels for fit to a device viewport
+    Default: viewport=1440x900
+
+format - returned image format of PNG (default), JPG or GIF
+
+css_url - url of css to inject into page before capture
+
+delay - delay time in seconds before capture starts
+
+ttl - seconds to hold image in cache
+    Default/Max: ttl=2592000 (30 days)
+
+force - set to 1 to force new capture
+
+placeholder - url to placeholder image while capture is running or 1 to use default
+
+user_agent - custom user agent string. Use to send this string as the user agent to
+    the website in conjuction with the viewport to emulate the desired device.
+    
+accept_lang - custom accept language header.
+
+Some premium accounts also have access to the following params.
+
+export - export the capture image to a specified location
+    export=s3://[bucket api key]:[bucket secret key]@[bucket] will export to AWS S3 bucket
+    export=ftp://[user]:[password]@[ftp server][/path/to/folder] will upload to folder using FTP
+    
+
+Changelog:
+
+1.0
+
+Initial Release
